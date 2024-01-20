@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    
+<div class="col-lg-12 py-4">
+    <h1>Welcome to the Home Page</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo, impedit fugit fuga, pariatur voluptates repellendus deleniti necessitatibus asperiores id magni, provident vitae soluta maiores aliquid ducimus aspernatur deserunt doloremque? Itaque sapiente neque tenetur voluptatum, voluptatibus similique. Dolor cupiditate quos, esse hic libero blanditiis sed exercitationem minima? Omnis, culpa vel?</p>
+
+    <hr>
+    
+    <!-- Other special functions here -->
+    <a class="btn btn-primary" href="{% url 'add_student' %}">New Student</a>
+    <a class="btn btn-primary" href="{% url 'all_students' %}">All Students</a>
+    <a class="btn btn-primary" href="{% url 'generate_face_encodings' %}">
+        Generate Face Encodings
+    </a>
+    <a class="btn btn-primary" href="{% url 'recognize_student' %}">Recognize Student</a>
+</div>
+
+{% endblock %}

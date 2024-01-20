@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="col-lg-12 py-4">
+
+    <h1>All students</h1>
+    <hr>
+
+    <a class="btn btn-primary" href="{% url 'index' %}">Back</a>
+    <hr>
+
+    <ul>
+        {% if students %}
+
+        {% for student in students %}
+            <li><a href="{% url 'student_details' student.id %}">{{ student.name }}</a></li>
+        {% endfor %}
+
+        {% else %}
+            <li>No Students found.</li>          
+        {% endif %}
+    </ul>
+
+</div>
+
+{% endblock %}
+```
